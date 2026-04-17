@@ -1,273 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammed Answar C K</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Muhammed Answar C K</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-    :root {
-      --bg: #111110;
-      --text: #d4d4d0;
-      --muted: #777773;
-      --accent: #e8e8e4;
-      --border: #2a2a28;
-      --link: #b0b0ac;
-      --tag-bg: #1e1e1c;
-      --tag-border: #333330;
-      --green: #4a9a5a;
-    }
+            :root {
+                --bg: #111110;
+                --text: #d4d4d0;
+                --muted: #777773;
+                --accent: #e8e8e4;
+                --border: #2a2a28;
+                --link: #b0b0ac;
+                --tag-bg: #1e1e1c;
+                --tag-border: #333330;
+                --green: #4a9a5a;
+            }
 
-    html {
-      font-size: 18px;
-    }
+            html {
+                font-size: 18px;
+            }
 
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'IBM Plex Sans', sans-serif;
-      font-weight: 400;
-      line-height: 1.75;
-      min-height: 100vh;
-    }
+            body {
+                background-color: var(--bg);
+                color: var(--text);
+                font-family: "IBM Plex Sans", sans-serif;
+                font-weight: 400;
+                line-height: 1.75;
+                min-height: 100vh;
+            }
 
-    a {
-      color: var(--link);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-    a:hover { color: var(--accent); }
+            a {
+                color: var(--link);
+                text-decoration: underline;
+                text-underline-offset: 4px;
+            }
+            a:hover {
+                color: var(--accent);
+            }
 
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 90px 48px 120px;
-    }
+            .container {
+                max-width: 860px;
+                margin: 0 auto;
+                padding: 90px 48px 120px;
+            }
 
-    /* ── Header ── */
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 40px;
-      margin-bottom: 60px;
-    }
+            /* ── Header ── */
+            header {
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 40px;
+                margin-bottom: 60px;
+            }
 
-    .name {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 2.2rem;
-      font-weight: 500;
-      color: var(--accent);
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
+            .name {
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 2.2rem;
+                font-weight: 500;
+                color: var(--accent);
+                letter-spacing: -0.5px;
+                margin-bottom: 8px;
+            }
 
-    .role {
-      font-size: 1rem;
-      color: var(--muted);
-      font-weight: 300;
-      letter-spacing: 0.4px;
-    }
+            .role {
+                font-size: 1rem;
+                color: var(--muted);
+                font-weight: 300;
+                letter-spacing: 0.4px;
+            }
 
-    /* ── Sections ── */
-    section {
-      margin-bottom: 56px;
-    }
+            /* ── Sections ── */
+            section {
+                margin-bottom: 56px;
+            }
 
-    .section-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
+            .section-label {
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.72rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: var(--muted);
+                margin-bottom: 20px;
+            }
 
-    /* ── About ── */
-    .about-text {
-      font-size: 1rem;
-      color: var(--text);
-      line-height: 1.85;
-      max-width: 680px;
-    }
+            /* ── About ── */
+            .about-text {
+                font-size: 1rem;
+                color: var(--text);
+                line-height: 1.85;
+                max-width: 680px;
+            }
 
-    /* ── Skills ── */
-    .skills-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+            /* ── Skills ── */
+            .skills-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
 
-    .skill-group-title {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-    }
+            .skill-group-title {
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.75rem;
+                color: var(--muted);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 12px;
+            }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
 
-    .tag {
-      background: var(--tag-bg);
-      border: 1px solid var(--tag-border);
-      border-radius: 4px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.82rem;
-      padding: 5px 14px;
-      color: #a0a09c;
-    }
+            .tag {
+                background: var(--tag-bg);
+                border: 1px solid var(--tag-border);
+                border-radius: 4px;
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.82rem;
+                padding: 5px 14px;
+                color: #a0a09c;
+            }
 
-    /* ── Divider ── */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0 0 24px;
-    }
+            /* ── Divider ── */
+            .divider {
+                border: none;
+                border-top: 1px solid var(--border);
+                margin: 0 0 24px;
+            }
 
-    /* ── Contact ── */
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+            /* ── Contact ── */
+            .contact-links {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
 
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-size: 1rem;
-    }
+            .contact-row {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-size: 1rem;
+            }
 
-    .contact-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--muted);
-      width: 56px;
-      flex-shrink: 0;
-    }
+            .contact-label {
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.72rem;
+                color: var(--muted);
+                width: 56px;
+                flex-shrink: 0;
+            }
 
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 32px;
-      margin-top: 72px;
-    }
+            /* ── Footer ── */
+            footer {
+                border-top: 1px solid var(--border);
+                padding-top: 32px;
+                margin-top: 72px;
+            }
 
-    .footer-line {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.82rem;
-      color: var(--muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      line-height: 1.7;
-    }
+            .footer-line {
+                font-family: "IBM Plex Mono", monospace;
+                font-size: 0.82rem;
+                color: var(--muted);
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                line-height: 1.7;
+            }
 
-    .server-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--green);
-      border-radius: 50%;
-      display: inline-block;
-      flex-shrink: 0;
-      margin-top: 6px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
+            .server-dot {
+                width: 8px;
+                height: 8px;
+                background: var(--green);
+                border-radius: 50%;
+                display: inline-block;
+                flex-shrink: 0;
+                margin-top: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="name">Muhammed Answar C K</div>
+                <div class="role">
+                    Security Researcher &amp; Software Developer
+                </div>
+            </header>
 
-    <header>
-      <div class="name">Muhammed Answar C K</div>
-      <div class="role">Security Researcher &amp; Software Developer</div>
-    </header>
+            <section>
+                <div class="section-label">About</div>
+                <p class="about-text">
+                    I work at the intersection of low-level systems, security
+                    research, and software development. My focus spans reverse
+                    engineering, vulnerability analysis, and building reliable
+                    backend systems. I like understanding how things work under
+                    the hood — and occasionally, taking them apart to find out.
+                </p>
+            </section>
 
-    <section>
-      <div class="section-label">About</div>
-      <p class="about-text">
-        I work at the intersection of low-level systems, security research, and software development.
-        My focus spans reverse engineering, vulnerability analysis, and building reliable backend systems.
-        I like understanding how things work under the hood — and occasionally, taking them apart to find out.
-      </p>
-    </section>
+            <section>
+                <div class="section-label">Skills</div>
+                <div class="skills-grid">
+                    <div>
+                        <div class="skill-group-title">Languages</div>
+                        <div class="tags">
+                            <span class="tag">C</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Rust</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
 
-    <section>
-      <div class="section-label">Skills</div>
-      <div class="skills-grid">
+                    <hr class="divider" />
 
-        <div>
-          <div class="skill-group-title">Languages</div>
-          <div class="tags">
-            <span class="tag">C</span>
-            <span class="tag">C++</span>
-            <span class="tag">Rust</span>
-            <span class="tag">Python</span>
-            <span class="tag">Node.js</span>
-          </div>
+                    <div>
+                        <div class="skill-group-title">
+                            Reverse Engineering &amp; Security
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Ghidra</span>
+                            <span class="tag">JADX</span>
+                            <span class="tag">Frida</span>
+                            <span class="tag">Deobfuscation</span>
+                            <span class="tag">Binary Analysis</span>
+                            <span class="tag">Malware Analysis</span>
+                            <span class="tag">Vulnerability Research</span>
+                        </div>
+                    </div>
+
+                    <hr class="divider" />
+
+                    <div>
+                        <div class="skill-group-title">
+                            DevOps &amp; Systems
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Linux</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Shell Scripting</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Version Control</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-label">Contact</div>
+                <div class="contact-links">
+                    <div class="contact-row">
+                        <span class="contact-label">GitHub</span>
+                        <a
+                            href="https://github.com/answarck"
+                            target="_blank"
+                            rel="noopener"
+                            >github.com/answarck</a
+                        >
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:answarc764@gmail.com"
+                            >answarc764@gmail.com</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-line">
+                    <span class="server-dot"></span>
+                    <span>
+                        You're not hitting Nginx. You're not hitting Apache.<br />
+                        This page is served by an
+                        <a href="https://github.com/answarck/http-server-rust"
+                            >HTTP server</a
+                        >
+                        I wrote myself — in Rust, from scratch.
+                    </span>
+                </div>
+            </footer>
         </div>
-
-        <hr class="divider"/>
-
-        <div>
-          <div class="skill-group-title">Reverse Engineering &amp; Security</div>
-          <div class="tags">
-            <span class="tag">Ghidra</span>
-            <span class="tag">JADX</span>
-            <span class="tag">Frida</span>
-            <span class="tag">Deobfuscation</span>
-            <span class="tag">Binary Analysis</span>
-            <span class="tag">Malware Analysis</span>
-            <span class="tag">Vulnerability Research</span>
-          </div>
-        </div>
-
-        <hr class="divider"/>
-
-        <div>
-          <div class="skill-group-title">DevOps &amp; Systems</div>
-          <div class="tags">
-            <span class="tag">Linux</span>
-            <span class="tag">Git</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Shell Scripting</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">Version Control</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="section-label">Contact</div>
-      <div class="contact-links">
-        <div class="contact-row">
-          <span class="contact-label">GitHub</span>
-          <a href="https://github.com/answarck" target="_blank" rel="noopener">github.com/answarck</a>
-        </div>
-        <div class="contact-row">
-          <span class="contact-label">Email</span>
-          <a href="mailto:answarc764@gmail.com">answarc764@gmail.com</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-line">
-        <span class="server-dot"></span>
-        <span>
-          You're not hitting Nginx. You're not hitting Apache.<br/>
-          This page is served by an HTTP server I wrote myself — in Rust, from scratch.
-        </span>
-      </div>
-    </footer>
-
-  </div>
-</body>
+    </body>
 </html>
